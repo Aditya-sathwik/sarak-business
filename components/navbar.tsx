@@ -5,7 +5,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Menu } from "lucide-react"
+import { Menu,Laptop } from "lucide-react"
 
 export default function Navbar() {
   const pathname = usePathname()
@@ -20,6 +20,7 @@ export default function Navbar() {
     { name: "About", path: "/about" },
     { name: "Services", path: "/services" },
     { name: "Clients", path: "/clients" },
+    { name: "Team", path: "/team" },
     { name: "Contact", path: "/contact" },
   ]
 
@@ -27,7 +28,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2">
-          <svg
+          {/* <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill="none"
@@ -38,8 +39,10 @@ export default function Navbar() {
             className="h-6 w-6 text-primary"
           >
             <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-          </svg>
-          <span className="font-bold">Strategic Consulting</span>
+          </svg> */}
+
+          <Laptop className="h-6 w-6 text-primary" />
+          <span className="font-bold">Saark Tech Consulting</span>
         </Link>
 
         <nav className="hidden md:flex gap-6">

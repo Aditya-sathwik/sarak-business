@@ -4,10 +4,11 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import { ArrowRight } from "lucide-react";
-import HeroSvg from "@/components/svg/hero-svg";
+import HeroSvg from "../public/mainhome.svg";
 import FeatureSvg from "@/components/svg/feature-svg";
+import Image from 'next/image';
 
-export default function Services() { // Changed from Home to Services
+export default function Services() { 
   const heroRef = useRef<HTMLDivElement>(null);
   const featuresRef = useRef<HTMLDivElement>(null);
 
@@ -43,10 +44,10 @@ export default function Services() { // Changed from Home to Services
         >
           <div className="flex-1 space-y-4">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter">
-              Our Consulting Services
+            Build Your Vision with Expert Solutions
             </h1>
             <p className="text-xl text-muted-foreground max-w-[600px]">
-              We provide expert consulting in business strategy, process optimization, and leadership development to drive your success.
+            We craft innovative products, deliver seamless technical support, and design stunning UI/UX to elevate your brand and drive success.
             </p>
             <div className="pt-4">
               <Button asChild size="lg" className="rounded-full">
@@ -56,8 +57,13 @@ export default function Services() { // Changed from Home to Services
               </Button>
             </div>
           </div>
-          <div className="flex-1 w-full max-w-[500px] mx-auto md:mx-0">
-            <HeroSvg />
+          <div className="flex-1 w-full max-w-[600px] mx-auto md:mx-0">
+          <Image
+          src={HeroSvg}
+          alt="My Image"
+          width={500} // required
+          height={500} // required
+        />
           </div>
         </div>
       </section>

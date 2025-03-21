@@ -1,8 +1,9 @@
 "use client"
 
 import { useEffect, useRef } from "react"
-import AboutSvg from "@/components/svg/about-svg"
+import AboutSvg from "../../public/its.png"
 import MissionSvg from "@/components/svg/mission-svg"
+import Image from 'next/image';
 
 export default function AboutPage() {
   const missionRef = useRef<HTMLDivElement>(null)
@@ -38,7 +39,7 @@ export default function AboutPage() {
       <section className="py-20 md:py-28 bg-muted/30">
         <div className="container px-4 md:px-6 mx-auto text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter mb-6">
-            About Our Consulting Firm
+            About Our  Firm
           </h1>
           <p className="text-xl text-muted-foreground max-w-[800px] mx-auto">
             We are a team of experienced consultants dedicated to helping businesses achieve their full potential
@@ -57,9 +58,7 @@ export default function AboutPage() {
           <div className="flex-1">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tighter mb-6">Our Mission</h2>
             <p className="text-lg text-muted-foreground mb-6">
-              Our mission is to deliver tailored consulting services that drive measurable results for clients across
-              industries. We believe in building long-term partnerships based on trust, expertise, and a commitment to
-              excellence.
+              Our mission is to craft innovative digital products, provide reliable technical support, and design compelling UI/UX experiences. We believe in building lasting client partnerships through expertise, agility, and a dedication to quality. We merge technical proficiency with creative solutions, enabling clients to launch impactful MVPs, maintain robust systems, and cultivate strong brand presence in the digital landscape.
             </p>
             <p className="text-lg text-muted-foreground">
               We combine deep industry knowledge with innovative methodologies to help our clients navigate complex
@@ -83,34 +82,30 @@ export default function AboutPage() {
 
           <div className="max-w-3xl mx-auto">
             <div className="timeline-item">
-              <h3 className="text-xl font-bold mb-2">Strategy Development</h3>
+              <h3 className="text-xl font-bold mb-2">MVP Development</h3>
               <p className="text-muted-foreground">
-                We craft comprehensive business strategies that align with your vision and market dynamics, setting a
-                clear path for growth and success.
+                We rapidly build Minimum Viable Products, enabling quick market validation and agile iteration for your innovative ideas.
               </p>
             </div>
 
             <div className="timeline-item">
-              <h3 className="text-xl font-bold mb-2">Operational Efficiency</h3>
+              <h3 className="text-xl font-bold mb-2">Technical Maintenance</h3>
               <p className="text-muted-foreground">
-                We optimize your operations to enhance productivity, reduce costs, and improve overall performance
-                across all business functions.
+                We provide comprehensive technical support and maintenance, ensuring your systems are reliable, secure, and perform optimally.
               </p>
             </div>
 
             <div className="timeline-item">
-              <h3 className="text-xl font-bold mb-2">Leadership Coaching</h3>
+              <h3 className="text-xl font-bold mb-2">UI/UX Design</h3>
               <p className="text-muted-foreground">
-                We develop your leadership team's capabilities through personalized coaching programs that foster
-                innovation and effective management.
+                We craft intuitive and engaging user interfaces and experiences, enhancing brand perception and user satisfaction significantly.
               </p>
             </div>
 
             <div className="timeline-item">
-              <h3 className="text-xl font-bold mb-2">Digital Transformation</h3>
+              <h3 className="text-xl font-bold mb-2">Product Development</h3>
               <p className="text-muted-foreground">
-                We guide your organization through digital transformation initiatives that leverage technology to create
-                competitive advantages.
+                We develop scalable and robust products, from concept to launch, focusing on quality and user-centric functionalities.
               </p>
             </div>
           </div>
@@ -133,7 +128,14 @@ export default function AboutPage() {
           </div>
 
           <div className="flex justify-center">
-            <AboutSvg />
+            {/* <AboutSvg /> */}
+            {/* 
+               <Image
+                      src={AboutSvg}
+                      alt="My Image"
+                      width={1000} // required
+                      height={500} // required
+                    /> */}
           </div>
         </div>
       </section>

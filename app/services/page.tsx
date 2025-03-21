@@ -40,7 +40,7 @@ export default function ServicesPage() {
             Our Services
           </h1>
           <p className="text-xl text-muted-foreground max-w-[800px] mx-auto">
-            We offer a comprehensive range of consulting services designed to help your business thrive in today's competitive landscape.
+            We provide end-to-end solutions to bring your ideas to life, from innovative product development to stunning design and reliable technical support.
           </p>
         </div>
       </section>
@@ -60,52 +60,26 @@ export default function ServicesPage() {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={2}
-                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                    d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"
                   />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold mb-4">Business Strategy & Transformation</h3>
+              <h3 className="text-2xl font-bold mb-4">Product Development & MVPs</h3>
               <p className="text-muted-foreground mb-6">
-                We develop comprehensive strategies that align with your business goals and market dynamics, setting a clear path for sustainable growth.
+                We transform your ideas into functional products and minimum viable products (MVPs) designed for rapid market entry and scalability.
               </p>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-start">
                   <Check className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                  <span>Market analysis and competitive positioning</span>
+                  <span>Ideation and prototyping</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                  <span>Business model innovation</span>
+                  <span>MVP development and testing</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                  <span>Growth strategy development</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="service-card bg-background rounded-lg p-8 shadow-sm border border-border/50 hover:border-primary/20 transition-all">
-              <div className="h-14 w-14 rounded-full bg-primary/10 flex items-center justify-center mb-6">
-                <svg className="h-7 w-7 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold mb-4">Process Optimization</h3>
-              <p className="text-muted-foreground mb-6">
-                We streamline your operations to enhance efficiency, reduce costs, and improve overall performance across all business functions.
-              </p>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                  <span>Workflow analysis and redesign</span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                  <span>Operational efficiency improvements</span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                  <span>Quality management systems</span>
+                  <span>Scalable product solutions</span>
                 </li>
               </ul>
             </div>
@@ -117,26 +91,26 @@ export default function ServicesPage() {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={2}
-                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
                   />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold mb-4">Leadership Development</h3>
+              <h3 className="text-2xl font-bold mb-4">Technical Services & Maintenance</h3>
               <p className="text-muted-foreground mb-6">
-                We empower your leadership team with the skills and knowledge needed to drive organizational success and foster innovation.
+                We provide robust technical solutions and ongoing maintenance to ensure your systems run smoothly and efficiently.
               </p>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-start">
                   <Check className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                  <span>Executive coaching programs</span>
+                  <span>Custom software development</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                  <span>Team building and collaboration</span>
+                  <span>System integration and optimization</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                  <span>Change management capabilities</span>
+                  <span>24/7 maintenance and support</span>
                 </li>
               </ul>
             </div>
@@ -148,26 +122,57 @@ export default function ServicesPage() {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={2}
-                    d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0zm-3-9v3m0 12v3m-9-9h3m12 0h-3"
                   />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold mb-4">Client Success Programs</h3>
+              <h3 className="text-2xl font-bold mb-4">UI/UX Designing & Branding</h3>
               <p className="text-muted-foreground mb-6">
-                We help you develop and implement customer-centric strategies that enhance satisfaction, loyalty, and long-term value.
+                We craft intuitive, visually appealing designs and cohesive branding to elevate your product’s user experience and market presence.
               </p>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-start">
                   <Check className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                  <span>Customer experience optimization</span>
+                  <span>User-centered UI/UX design</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                  <span>Retention strategy development</span>
+                  <span>Brand identity development</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                  <span>Customer success frameworks</span>
+                  <span>Prototyping and usability testing</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="service-card bg-background rounded-lg p-8 shadow-sm border border-border/50 hover:border-primary/20 transition-all">
+              <div className="h-14 w-14 rounded-full bg-primary/10 flex items-center justify-center mb-6">
+                <svg className="h-7 w-7 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold mb-4">End-to-End Solutions</h3>
+              <p className="text-muted-foreground mb-6">
+                From concept to launch, we combine our expertise to deliver seamless, high-quality solutions tailored to your business needs.
+              </p>
+              <ul className="space-y-2 mb-6">
+                <li className="flex items-start">
+                  <Check className="h-5 w-5 text-primary mr-2 mt-0.5" />
+                  <span>Full-cycle product development</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="h-5 w-5 text-primary mr-2 mt-0.5" />
+                  <span>Cross-functional team collaboration</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="h-5 w-5 text-primary mr-2 mt-0.5" />
+                  <span>Post-launch support and iteration</span>
                 </li>
               </ul>
             </div>
@@ -187,9 +192,9 @@ export default function ServicesPage() {
           style={{ animationFillMode: "forwards" }}
         >
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tighter mb-4">Our Consulting Process</h2>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tighter mb-4">Our Development Process</h2>
             <p className="text-lg text-muted-foreground max-w-[800px] mx-auto">
-              We follow a structured yet flexible approach to ensure we deliver exceptional results for every client.
+              We follow a structured yet flexible approach to ensure your product is built efficiently and meets your business goals.
             </p>
           </div>
 
@@ -200,7 +205,7 @@ export default function ServicesPage() {
               </div>
               <h3 className="text-xl font-bold mb-2">Discovery</h3>
               <p className="text-muted-foreground">
-                We begin by understanding your business, challenges, and goals through in-depth discussions and analysis.
+                We start by understanding your vision, requirements, and target audience through detailed discussions and research.
               </p>
             </div>
 
@@ -208,9 +213,9 @@ export default function ServicesPage() {
               <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 mx-auto">
                 <span className="text-primary font-bold">2</span>
               </div>
-              <h3 className="text-xl font-bold mb-2">Strategy</h3>
+              <h3 className="text-xl font-bold mb-2">Design & Strategy</h3>
               <p className="text-muted-foreground">
-                We develop a tailored strategy and implementation plan based on our findings and your specific needs.
+                We create a tailored plan, including UI/UX designs and technical architecture, to bring your idea to life.
               </p>
             </div>
 
@@ -218,9 +223,9 @@ export default function ServicesPage() {
               <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 mx-auto">
                 <span className="text-primary font-bold">3</span>
               </div>
-              <h3 className="text-xl font-bold mb-2">Implementation</h3>
+              <h3 className="text-xl font-bold mb-2">Development</h3>
               <p className="text-muted-foreground">
-                We work alongside your team to execute the strategy, providing guidance and support throughout.
+                Our team builds your product or MVP, ensuring high-quality code and seamless functionality.
               </p>
             </div>
 
@@ -228,9 +233,9 @@ export default function ServicesPage() {
               <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 mx-auto">
                 <span className="text-primary font-bold">4</span>
               </div>
-              <h3 className="text-xl font-bold mb-2">Evaluation</h3>
+              <h3 className="text-xl font-bold mb-2">Launch & Support</h3>
               <p className="text-muted-foreground">
-                We measure results, refine our approach as needed, and ensure sustainable long-term success.
+                We deploy your product, monitor performance, and provide ongoing maintenance for long-term success.
               </p>
             </div>
           </div>

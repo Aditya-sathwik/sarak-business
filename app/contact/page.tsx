@@ -45,7 +45,7 @@ export default function ContactPage() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add("animate-out"); // Changed from "animate-out" to "animate-in"
+            entry.target.classList.add("animate-out"); 
           }
         });
       },
