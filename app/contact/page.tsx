@@ -68,7 +68,9 @@ export default function ContactPage() {
             Get in Touch
           </h1>
           <p className="text-xl text-muted-foreground max-w-[800px] mx-auto">
-            Ready to transform your business? Contact us today to schedule a consultation with our expert team.
+            Ready to transform your business? Contact us today to schedule a consultation with our expert team.We’re here to assist you with technical support, consultations, and development services to help your business thrive. Reach out to us today!
+
+
           </p>
         </div>
       </section>
@@ -92,7 +94,7 @@ export default function ContactPage() {
                   <Mail className="h-6 w-6 text-primary mr-4 mt-0.5" />
                   <div>
                     <h3 className="font-bold mb-1">Email</h3>
-                    <p className="text-muted-foreground">info@yourconsultingfirm.com</p>
+                    <p className="text-muted-foreground">sameersaarkbusiness@gmail.com</p>
                   </div>
                 </div>
 
@@ -100,7 +102,7 @@ export default function ContactPage() {
                   <Phone className="h-6 w-6 text-primary mr-4 mt-0.5" />
                   <div>
                     <h3 className="font-bold mb-1">Phone</h3>
-                    <p className="text-muted-foreground">(555) 123-4567</p>
+                    <p className="text-muted-foreground">+91 98703 07966</p>
                   </div>
                 </div>
 
@@ -109,9 +111,8 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-bold mb-1">Office</h3>
                     <p className="text-muted-foreground">
-                      123 Business Avenue, Suite 500
-                      <br />
-                      New York, NY 10001
+                     
+                      New Delhi, India
                     </p>
                   </div>
                 </div>

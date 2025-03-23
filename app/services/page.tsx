@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { ArrowRight, Check } from "lucide-react";
+import { ArrowRight, Check, MonitorCog, Code, PencilRuler, Zap } from "lucide-react";
 import ServiceSvg from "@/components/svg/service-svg";
 
 export default function ServicesPage() {
@@ -55,14 +55,7 @@ export default function ServicesPage() {
           <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
             <div className="service-card bg-background rounded-lg p-8 shadow-sm border border-border/50 hover:border-primary/20 transition-all">
               <div className="h-14 w-14 rounded-full bg-primary/10 flex items-center justify-center mb-6">
-                <svg className="h-7 w-7 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"
-                  />
-                </svg>
+                <MonitorCog className="h-7 w-7 text-primary" />
               </div>
               <h3 className="text-2xl font-bold mb-4">Product Development & MVPs</h3>
               <p className="text-muted-foreground mb-6">
@@ -86,14 +79,7 @@ export default function ServicesPage() {
 
             <div className="service-card bg-background rounded-lg p-8 shadow-sm border border-border/50 hover:border-primary/20 transition-all">
               <div className="h-14 w-14 rounded-full bg-primary/10 flex items-center justify-center mb-6">
-                <svg className="h-7 w-7 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
-                  />
-                </svg>
+                <Code className="h-7 w-7 text-primary" />
               </div>
               <h3 className="text-2xl font-bold mb-4">Technical Services & Maintenance</h3>
               <p className="text-muted-foreground mb-6">
@@ -117,14 +103,7 @@ export default function ServicesPage() {
 
             <div className="service-card bg-background rounded-lg p-8 shadow-sm border border-border/50 hover:border-primary/20 transition-all">
               <div className="h-14 w-14 rounded-full bg-primary/10 flex items-center justify-center mb-6">
-                <svg className="h-7 w-7 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0zm-3-9v3m0 12v3m-9-9h3m12 0h-3"
-                  />
-                </svg>
+                <PencilRuler className="h-7 w-7 text-primary" />
               </div>
               <h3 className="text-2xl font-bold mb-4">UI/UX Designing & Branding</h3>
               <p className="text-muted-foreground mb-6">
@@ -148,14 +127,7 @@ export default function ServicesPage() {
 
             <div className="service-card bg-background rounded-lg p-8 shadow-sm border border-border/50 hover:border-primary/20 transition-all">
               <div className="h-14 w-14 rounded-full bg-primary/10 flex items-center justify-center mb-6">
-                <svg className="h-7 w-7 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M13 10V3L4 14h7v7l9-11h-7z"
-                  />
-                </svg>
+                <Zap className="h-7 w-7 text-primary" />
               </div>
               <h3 className="text-2xl font-bold mb-4">End-to-End Solutions</h3>
               <p className="text-muted-foreground mb-6">

@@ -39,7 +39,7 @@ export default function AboutPage() {
       <section className="py-20 md:py-28 bg-muted/30">
         <div className="container px-4 md:px-6 mx-auto text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter mb-6">
-            About Our  Firm
+            About Us
           </h1>
           <p className="text-xl text-muted-foreground max-w-[800px] mx-auto">
             We are a team of experienced consultants dedicated to helping businesses achieve their full potential
