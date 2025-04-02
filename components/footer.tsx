@@ -1,28 +1,51 @@
+"use client"
+
+
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+
 import Link from "next/link"
 
+import { Laptop } from "lucide-react"
+
 export default function Footer() {
+  const [isTermsOpen, setIsTermsOpen] = useState(false);
+  const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
+  const [isCookieOpen, setIsCookieOpen] = useState(false);
+  const handleTermsClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    setIsTermsOpen(true);
+  };
+
+  const handlePrivacyClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    setIsPrivacyOpen(true);
+  };
+
+  const handleCookieClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    setIsCookieOpen(true);
+  };
+  const handleClose = () => {
+    setIsTermsOpen(false);
+    setIsPrivacyOpen(false);
+    setIsCookieOpen(false);
+  };
+
+
+
   return (
     <footer className="border-t bg-muted/40">
       <div className="container px-4 md:px-6 py-8 md:py-12">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
           <div className="col-span-2 md:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="h-6 w-6 text-primary"
-              >
-                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-              </svg>
-              <span className="font-bold">Strategic Consulting</span>
+
+              <Laptop className="h-6 w-6 text-primary" />
+              <span className="font-bold">Saark Tech Consulting</span>
             </Link>
             <p className="text-sm text-muted-foreground mb-4">
-              Transforming businesses with strategic excellence and tailored consulting services.
+              We specialize in providing comprehensive Technical support to Business and Startup
             </p>
             <div className="flex space-x-4">
               <Link href="#" className="text-muted-foreground hover:text-primary">
@@ -78,18 +101,23 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/services" className="text-sm text-muted-foreground hover:text-primary">
+                  Services
+                </Link>
+              </li>
+              <li>
                 <Link href="/clients" className="text-sm text-muted-foreground hover:text-primary">
-                  Case Studies
+                  clients
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
-                  Careers
+                <Link href="/team" className="text-sm text-muted-foreground hover:text-primary">
+                  Team
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
-                  Blog
+                <Link href="/contact" className="text-sm text-muted-foreground hover:text-primary">
+                  contact
                 </Link>
               </li>
             </ul>
@@ -100,22 +128,22 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link href="/services" className="text-sm text-muted-foreground hover:text-primary">
-                  Business Strategy
+                  Product Development & MVPs
                 </Link>
               </li>
               <li>
                 <Link href="/services" className="text-sm text-muted-foreground hover:text-primary">
-                  Process Optimization
+                  Technical Services & Maintenance
                 </Link>
               </li>
               <li>
                 <Link href="/services" className="text-sm text-muted-foreground hover:text-primary">
-                  Leadership Development
+                  UI/UX Designing & Branding
                 </Link>
               </li>
               <li>
                 <Link href="/services" className="text-sm text-muted-foreground hover:text-primary">
-                  Client Success Programs
+                  End-to-End Solutions
                 </Link>
               </li>
             </ul>
@@ -125,17 +153,17 @@ export default function Footer() {
             <h3 className="font-semibold mb-4">Legal</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
+                <Link href="#" onClick={handleTermsClick} className="text-sm text-muted-foreground hover:text-primary">
                   Terms of Service
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
+                <Link href="#" onClick={handlePrivacyClick} className="text-sm text-muted-foreground hover:text-primary">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
+                <Link href="#" onClick={handleCookieClick} className="text-sm text-muted-foreground hover:text-primary">
                   Cookie Policy
                 </Link>
               </li>
@@ -145,20 +173,69 @@ export default function Footer() {
 
         <div className="border-t mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-muted-foreground mb-4 md:mb-0">
-            &copy; {new Date().getFullYear()} Strategic Consulting. All rights reserved.
+            &copy; {new Date().getFullYear()} Saark Tech Consulting. All rights reserved.
           </p>
           <div className="flex space-x-4">
-            <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
+            <Link href="#" onClick={handleTermsClick} className="text-sm text-muted-foreground hover:text-primary">
               Terms
             </Link>
-            <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
+            <Link href="#" onClick={handlePrivacyClick} className="text-sm text-muted-foreground hover:text-primary">
               Privacy
             </Link>
-            <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
+            <Link href="#" onClick={handleCookieClick} className="text-sm text-muted-foreground hover:text-primary">
               Cookies
             </Link>
           </div>
         </div>
+
+
+        {isTermsOpen && (
+  <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+    <div className="bg-background rounded-lg p-4 sm:p-6 max-w-[90%] sm:max-w-md w-full mx-2 sm:mx-4">
+      <h2 className="text-lg sm:text-xl font-bold mb-4">Terms of Service</h2>
+      <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6">
+        By engaging with Saark Tech Consulting, you agree to the following terms governing our services—Product Development & MVPs, Technical Services & Maintenance, and UI/UX Designing & Branding:
+      </p>
+      <ul className="list-disc pl-4 sm:pl-5 text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6 space-y-2">
+        <li>We deliver custom solutions tailored to your needs, including rapid MVP development, technical support, and UI/UX design.</li>
+        <li>Deliverables are provided as agreed in writing; no additional warranties extend beyond these terms.</li>
+        <li>Ownership of deliverables transfers to you upon full payment; we retain rights to our tools and methods.</li>
+        <li>We are not liable for issues caused by third-party services or inaccurate client information.</li>
+      </ul>
+      <Button onClick={handleClose} className="w-full text-sm sm:text-base">
+        Got It
+      </Button>
+    </div>
+  </div>
+)}
+
+{isPrivacyOpen && (
+  <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+    <div className="bg-background rounded-lg p-4 sm:p-6 max-w-[90%] sm:max-w-md w-full mx-2 sm:mx-4">
+      <h2 className="text-lg sm:text-xl font-bold mb-4">Privacy Policy</h2>
+      <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6">
+        We collect minimal data to deliver Product Development & MVPs, Technical Services & Maintenance, and UI/UX Designing & Branding. Your information is secure and never shared without consent.
+      </p>
+      <Button onClick={handleClose} className="w-full text-sm sm:text-base">
+        Got It
+      </Button>
+    </div>
+  </div>
+)}
+
+{isCookieOpen && (
+  <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+    <div className="bg-background rounded-lg p-4 sm:p-6 max-w-[90%] sm:max-w-md w-full mx-2 sm:mx-4">
+      <h2 className="text-lg sm:text-xl font-bold mb-4">Cookie Policy</h2>
+      <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6">
+        We use cookies to enhance your experience with our Product Development & MVPs, Technical Services & Maintenance, and UI/UX Designing & Branding services. You can opt out anytime.
+      </p>
+      <Button onClick={handleClose} className="w-full text-sm sm:text-base">
+        Got It
+      </Button>
+    </div>
+  </div>
+)}
       </div>
     </footer>
   )
