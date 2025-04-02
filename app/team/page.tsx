@@ -67,14 +67,20 @@ export default function TeamPage() {
                 key={member.id}
                 className="bg-background rounded-lg p-6 shadow-sm border border-border/50 flex flex-col items-center text-center transition-all hover:shadow-md hover:-translate-y-1"
               >
-                <div className="relative w-40 h-40 rounded-full overflow-hidden mb-6 border-4 border-primary/10">
-                  <Image
-                    src={member.image || "/placeholder.svg"}
-                    alt={member.name}
-                    width={160}
-                    height={160}
-                    className="object-cover"
-                  />
+                <div className="relative w-40 h-40 rounded-full mb-6 border-4 border-primary/10 flex items-center justify-center overflow-hidden">
+                  <div className="absolute inset-0">
+                    <Image
+                      src={member.image || "/placeholder.svg"}
+                      alt={member.name}
+                      fill
+                      sizes="160px"
+                      className="object-cover"
+                      style={{ 
+                        objectPosition: "center top"
+                      }}
+                      priority
+                    />
+                  </div>
                 </div>
                 <h3 className="text-xl font-bold mb-1">{member.name}</h3>
                 <p className="text-primary font-medium mb-4">{member.role}</p>

@@ -23,7 +23,7 @@ export type TeamMember = {
       id: "member-1",
       name: "Sameer",
       role: "Software Engineer",
-      image: sameer,
+      image: sameer.src,
       bio: "AI & Machine Learning Engineer & Full-Stack Developer",
       socialLinks: {
         twitter: "https://twitter.com/loremipsum",
@@ -33,9 +33,9 @@ export type TeamMember = {
     },
     {
       id: "member-2",
-      name: " Sai Ram Kaushik",
+      name: " Sairam Kaushik",
       role: "Software Engineer",
-      image: kaushik,
+      image: kaushik.src,
       bio: " Full-Stack Developer specializing in React, Node.js, and Express.js",
       socialLinks: {
         twitter: "https://twitter.com/dolorsit",
@@ -47,7 +47,7 @@ export type TeamMember = {
       id: "member-3",
       name: "Akanksha Tomer",
       role: "Senior Software Engineer",
-      image: akanksha,
+      image: akanksha.src,
       bio: "Integration Specialist excelling in MFT API and Software AG Webmethods",
       socialLinks: {
         twitter: "https://twitter.com/ametconsectetur",
@@ -59,7 +59,7 @@ export type TeamMember = {
       id: "member-4",
       name: "Aditya Sathwik",
       role: "Software Engineer",
-      image: aditya,
+      image: aditya.src,
       bio: "Full-Stack Developer with expertise in React, Node.js, and Express.js",
       socialLinks: {
         twitter: "https://twitter.com/adipiscingelit",
