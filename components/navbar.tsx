@@ -1,19 +1,20 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Menu,Laptop } from "lucide-react"
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Menu, Laptop } from "lucide-react";
 
 export default function Navbar() {
-  const pathname = usePathname()
-  const [isOpen, setIsOpen] = useState(false)
+  const pathname = usePathname();
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const isActive = (path: string) => {
-    return pathname === path
-  }
+    return pathname === path;
+  };
 
   const navLinks = [
     { name: "Home", path: "/" },
@@ -22,25 +23,27 @@ export default function Navbar() {
     { name: "Clients", path: "/clients" },
     { name: "Team", path: "/team" },
     { name: "Contact", path: "/contact" },
-  ]
+  ];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="  flex h-16 items-center justify-between px-4 md:px-6">
+    <header
+      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+        isScrolled
+          ? "bg-background/95 shadow-md backdrop-blur"
+          : "bg-transparent"
+      }`}
+    >
+      <div className="flex h-16 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2">
-          {/* <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="h-6 w-6 text-primary"
-          >
-            <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-          </svg> */}
-
           <Laptop className="h-6 w-6 text-primary" />
           <span className="font-bold">Saark Tech Consulting</span>
         </Link>
@@ -79,7 +82,9 @@ export default function Navbar() {
                     href={link.path}
                     onClick={() => setIsOpen(false)}
                     className={`text-lg font-medium transition-colors hover:text-primary ${
-                      isActive(link.path) ? "text-primary" : "text-muted-foreground"
+                      isActive(link.path)
+                        ? "text-primary"
+                        : "text-muted-foreground"
                     }`}
                   >
                     {link.name}
@@ -96,6 +101,5 @@ export default function Navbar() {
         </div>
       </div>
     </header>
-  )
+  );
 }
-

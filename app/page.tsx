@@ -1,75 +1,90 @@
-"use client"; // Add this at the top
+"use client"
 
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import { useEffect, useRef } from "react";
-import { ArrowRight } from "lucide-react";
-import HeroSvg from "../public/mainhome.svg";
-import FeatureSvg from "@/components/svg/feature-svg";
-import Image from 'next/image';
+import { Button } from "@/components/ui/button"
+import Link from "next/link"
+import { useEffect, useRef } from "react"
+import { ArrowRight } from "lucide-react"
+import HeroSvg from "../public/mainhome.svg"
+import FeatureSvg from "@/components/svg/feature-svg"
+import Image from "next/image"
 
-export default function Services() { 
-  const heroRef = useRef<HTMLDivElement>(null);
-  const featuresRef = useRef<HTMLDivElement>(null);
+export default function Services() {
+  const heroRef = useRef<HTMLDivElement>(null)
+  const featuresRef = useRef<HTMLDivElement>(null)
+  const videoRef = useRef<HTMLVideoElement>(null)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add("animate-out");
+            entry.target.classList.add("animate-out")
           }
-        });
+        })
       },
-      { threshold: 0.1 }
-    );
+      { threshold: 0.1 },
+    )
 
-    if (heroRef.current) observer.observe(heroRef.current);
-    if (featuresRef.current) observer.observe(featuresRef.current);
+    if (heroRef.current) observer.observe(heroRef.current)
+    if (featuresRef.current) observer.observe(featuresRef.current)
 
     return () => {
-      if (heroRef.current) observer.unobserve(heroRef.current);
-      if (featuresRef.current) observer.unobserve(featuresRef.current);
-    };
-  }, []);
+      if (heroRef.current) observer.unobserve(heroRef.current)
+      if (featuresRef.current) observer.unobserve(featuresRef.current)
+    }
+  }, [])
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col relative">
+      {/* Video Background */}
+
+
       {/* Hero Section */}
-      <section className="relative py-20 md:py-28 overflow-hidden">
-        <div
-          ref={heroRef}
-          className="container px-4 md:px-6 mx-auto flex flex-col md:flex-row items-center gap-8 opacity-0 transition-all duration-1000 translate-y-8"
-          style={{ animationFillMode: "forwards" }}
-        >
-          <div className="flex-1 space-y-4">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter">
-            Build Your Vision with Expert Solutions
-            </h1>
-            <p className="text-xl text-muted-foreground max-w-[600px]">
-            We craft innovative products, deliver seamless technical support, and design stunning UI/UX to elevate your brand and drive success.
-            </p>
-            <div className="pt-4">
-              <Button asChild size="lg" className="rounded-full">
-                <Link href="/contact">
-                  Get Started <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </div>
-          </div>
-          <div className="flex-1 w-full max-w-[600px] mx-auto md:mx-0">
-          <Image
-          src={HeroSvg}
-          alt="My Image"
-          width={500} // required
-          height={500} // required
-        />
-          </div>
-        </div>
-      </section>
+      <section className="relative py-20 md:py-28 overflow-hidden z-10">
+  {/* Video Background */}
+  <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
+    <video ref={videoRef} className="absolute min-w-full min-h-full object-cover" autoPlay muted loop playsInline>
+      <source src="/background-video.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div className="absolute inset-0 bg-background/80 backdrop-blur-sm"></div>
+  </div>
+
+  {/* Hero Content */}
+  <div
+    ref={heroRef}
+    className="container px-4 md:px-6 mx-auto flex flex-col md:flex-row items-center gap-8 opacity-0 transition-all duration-1000 translate-y-8"
+    style={{ animationFillMode: "forwards" }}
+  >
+    <div className="flex-1 space-y-4">
+      <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter">
+        Build Your Vision with Expert Solutions
+      </h1>
+      <p className="text-xl text-muted-foreground max-w-[600px]">
+        We craft innovative products, deliver seamless technical support, and design stunning UI/UX to elevate
+        your brand and drive success.
+      </p>
+      <div className="pt-4">
+        <Button asChild size="lg" className="rounded-full">
+          <Link href="/contact">
+            Get Started <ArrowRight className="ml-2 h-4 w-4" />
+          </Link>
+        </Button>
+      </div>
+    </div>
+    <div className="flex-1 w-full max-w-[600px] mx-auto md:mx-0">
+      <Image
+        src={HeroSvg || "/placeholder.svg"}
+        alt="My Image"
+        width={500} // required
+        height={500} // required
+      />
+    </div>
+  </div>
+</section>
 
       {/* Features Section */}
-      <section className="py-20 bg-muted/50">
+      <section className="py-20 bg-primary/90relative z-50">
         <div
           ref={featuresRef}
           className="container px-4 md:px-6 mx-auto opacity-0 transition-all duration-1000 translate-y-8"
@@ -83,7 +98,7 @@ export default function Services() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-background rounded-lg p-6 shadow-sm">
+            <div className="bg-background/80 backdrop-blur-sm rounded-lg p-6 shadow-sm">
               <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                 <svg className="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -95,7 +110,7 @@ export default function Services() {
               </p>
             </div>
 
-            <div className="bg-background rounded-lg p-6 shadow-sm">
+            <div className="bg-background/80 backdrop-blur-sm rounded-lg p-6 shadow-sm">
               <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                 <svg className="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path
@@ -112,7 +127,7 @@ export default function Services() {
               </p>
             </div>
 
-            <div className="bg-background rounded-lg p-6 shadow-sm">
+            <div className="bg-background/80 backdrop-blur-sm rounded-lg p-6 shadow-sm">
               <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                 <svg className="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path
@@ -137,7 +152,7 @@ export default function Services() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-primary text-primary-foreground">
+      <section className="py-20 bg-primary/90 text-primary-foreground relative z-10">
         <div className="container px-4 md:px-6 mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tighter mb-4">Ready to Elevate Your Business?</h2>
           <p className="text-xl max-w-[600px] mx-auto mb-8 text-primary-foreground/80">
@@ -151,5 +166,5 @@ export default function Services() {
         </div>
       </section>
     </div>
-  );
+  )
 }
