@@ -37,54 +37,50 @@ export default function Services() {
   return (
     <div className="flex flex-col relative">
       {/* Video Background */}
-
+      <div className="fixed inset-0 w-full h-full z-0 overflow-hidden">
+        <video ref={videoRef} className="absolute min-w-full min-h-full object-cover" autoPlay muted loop playsInline>
+          <source src="/background-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div className="absolute inset-0 bg-background/80 backdrop-blur-sm"></div>
+      </div>
 
       {/* Hero Section */}
       <section className="relative py-20 md:py-28 overflow-hidden z-10">
-  {/* Video Background */}
-  <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
-    <video ref={videoRef} className="absolute min-w-full min-h-full object-cover" autoPlay muted loop playsInline>
-      <source src="/background-video.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-    <div className="absolute inset-0 bg-background/80 backdrop-blur-sm"></div>
-  </div>
-
-  {/* Hero Content */}
-  <div
-    ref={heroRef}
-    className="container px-4 md:px-6 mx-auto flex flex-col md:flex-row items-center gap-8 opacity-0 transition-all duration-1000 translate-y-8"
-    style={{ animationFillMode: "forwards" }}
-  >
-    <div className="flex-1 space-y-4">
-      <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter">
-        Build Your Vision with Expert Solutions
-      </h1>
-      <p className="text-xl text-muted-foreground max-w-[600px]">
-        We craft innovative products, deliver seamless technical support, and design stunning UI/UX to elevate
-        your brand and drive success.
-      </p>
-      <div className="pt-4">
-        <Button asChild size="lg" className="rounded-full">
-          <Link href="/contact">
-            Get Started <ArrowRight className="ml-2 h-4 w-4" />
-          </Link>
-        </Button>
-      </div>
-    </div>
-    <div className="flex-1 w-full max-w-[600px] mx-auto md:mx-0">
-      <Image
-        src={HeroSvg || "/placeholder.svg"}
-        alt="My Image"
-        width={500} // required
-        height={500} // required
-      />
-    </div>
-  </div>
-</section>
+        <div
+          ref={heroRef}
+          className="container px-4 md:px-6 mx-auto flex flex-col md:flex-row items-center gap-8 opacity-0 transition-all duration-1000 translate-y-8"
+          style={{ animationFillMode: "forwards" }}
+        >
+          <div className="flex-1 space-y-4">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter">
+              Build Your Vision with Expert Solutions
+            </h1>
+            <p className="text-xl text-muted-foreground max-w-[600px]">
+              We craft innovative products, deliver seamless technical support, and design stunning UI/UX to elevate
+              your brand and drive success.
+            </p>
+            <div className="pt-4">
+              <Button asChild size="lg" className="rounded-full">
+                <Link href="/contact">
+                  Get Started <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+          </div>
+          <div className="flex-1 w-full max-w-[600px] mx-auto md:mx-0">
+            <Image
+              src={HeroSvg || "/placeholder.svg"}
+              alt="My Image"
+              width={500} // required
+              height={500} // required
+            />
+          </div>
+        </div>
+      </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-primary/90relative z-50">
+      <section className="py-20  bg-background/95 relative z-10000">
         <div
           ref={featuresRef}
           className="container px-4 md:px-6 mx-auto opacity-0 transition-all duration-1000 translate-y-8"
