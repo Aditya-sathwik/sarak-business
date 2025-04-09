@@ -17,27 +17,44 @@ export default function ContactPage() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormState((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError(null);
 
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-      setFormState({
-        name: "",
-        email: "",
-        company: "",
-        message: "",
+    try {
+      const response = await fetch("https://formspree.io/f/{your-form-id}", {
+        method: "POST",
+        headers: {
+          "Accept": "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formState),
       });
-    }, 1500);
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        setFormState({
+          name: "",
+          email: "",
+          company: "",
+          message: "",
+        });
+      } else {
+        throw new Error("Form submission failed");
+      }
+    } catch (err) {
+      setError("Something went wrong. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   useEffect(() => {
@@ -68,9 +85,7 @@ export default function ContactPage() {
             Get in Touch
           </h1>
           <p className="text-xl text-muted-foreground max-w-[800px] mx-auto">
-            Ready to transform your business? Contact us today to schedule a consultation with our expert team.We’re here to assist you with technical support, consultations, and development services to help your business thrive. Reach out to us today!
-
-
+            Ready to transform your business? Contact us today to schedule a consultation with our expert team. We’re here to assist you with technical support, consultations, and development services to help your business thrive. Reach out to us today!
           </p>
         </div>
       </section>
@@ -94,7 +109,7 @@ export default function ContactPage() {
                   <Mail className="h-6 w-6 text-primary mr-4 mt-0.5" />
                   <div>
                     <h3 className="font-bold mb-1">Email</h3>
-                    <p className="text-muted-foreground">sameersaarkbusiness@gmail.com</p>
+                    <p className="text-muted-foreground">sameer@saarktechconsultancy.in</p>
                   </div>
                 </div>
 
@@ -111,8 +126,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-bold mb-1">Office</h3>
                     <p className="text-muted-foreground">
-                     
-                      New Delhi, India
+                      Innova Cybergreen, Tower C, 5th floor, DLF Cybergreen, Cyber City, Sector 24, Gurgoon, Haryana 122001
                     </p>
                   </div>
                 </div>
@@ -197,6 +211,10 @@ export default function ContactPage() {
                       required
                     />
                   </div>
+
+                  {error && (
+                    <p className="text-red-500 text-sm">{error}</p>
+                  )}
 
                   <Button type="submit" className="w-full" disabled={isSubmitting}>
                     {isSubmitting ? "Sending..." : "Send Message"}
