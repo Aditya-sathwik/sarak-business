@@ -30,10 +30,10 @@ export default function ContactPage() {
     setError(null);
 
     try {
-      const response = await fetch("https://formspree.io/f/{your-form-id}", {
+      const response = await fetch("https://formspree.io/f/xeoavzkw", {
         method: "POST",
         headers: {
-          "Accept": "application/json",
+          "Accept": "application/json", 
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formState),

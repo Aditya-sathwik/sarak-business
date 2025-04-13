@@ -35,8 +35,8 @@ export default function Footer() {
 
 
   return (
-    <footer className="border-t bg-background/95 z-50 ">
-      <div className="container px-4 md:px-6 py-8 md:py-12">
+    <footer className="border-t bg-background/95 z-50  w-full">
+      <div className=" px-4 md:px-6 py-8 md:py-12  justify-between">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
           <div className="col-span-2 md:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4">

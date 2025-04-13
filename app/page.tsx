@@ -53,10 +53,16 @@ export default function Services() {
           style={{ animationFillMode: "forwards" }}
         >
           <div className="flex-1 space-y-4">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter">
+            <h1
+              className="font-bold tracking-tighter text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
+              style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}
+            >
               Build Your Vision with Expert Solutions
             </h1>
-            <p className="text-xl text-muted-foreground max-w-[600px]">
+            <p
+              className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-[600px]"
+              style={{ fontSize: "clamp(1rem, 2.5vw, 1.125rem)" }}
+            >
               We craft innovative products, deliver seamless technical support, and design stunning UI/UX to elevate
               your brand and drive success.
             </p>
@@ -72,23 +78,31 @@ export default function Services() {
             <Image
               src={HeroSvg || "/placeholder.svg"}
               alt="My Image"
-              width={500} // required
-              height={500} // required
+              width={500}
+              height={500}
             />
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20  bg-background/95 relative z-10000">
+      <section className="py-20 bg-background/95 relative z-10">
         <div
           ref={featuresRef}
           className="container px-4 md:px-6 mx-auto opacity-0 transition-all duration-1000 translate-y-8"
           style={{ animationFillMode: "forwards" }}
         >
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tighter">Our Service Offerings</h2>
-            <p className="mt-4 text-xl text-muted-foreground max-w-[800px] mx-auto">
+            <h2
+              className="font-bold tracking-tighter text-2xl sm:text-3xl md:text-4xl"
+              style={{ fontSize: "clamp(1.75rem, 4vw, 2.5rem)" }}
+            >
+              Our Service Offerings
+            </h2>
+            <p
+              className="mt-4 text-base sm:text-lg md:text-xl text-muted-foreground max-w-[800px] mx-auto"
+              style={{ fontSize: "clamp(1rem, 2.5vw, 1.125rem)" }}
+            >
               Tailored solutions designed to meet your unique business needs.
             </p>
           </div>
@@ -100,8 +114,16 @@ export default function Services() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold mb-2">Strategic Planning</h3>
-              <p className="text-muted-foreground">
+              <h3
+                className="text-lg sm:text-xl font-bold mb-2"
+                style={{ fontSize: "clamp(1.25rem, 2.5vw, 1.5rem)" }}
+              >
+                Strategic Planning
+              </h3>
+              <p
+                className="text-muted-foreground text-sm sm:text-base"
+                style={{ fontSize: "clamp(0.875rem, 2vw, 1rem)" }}
+              >
                 We develop comprehensive strategies aligned with your business goals and market dynamics.
               </p>
             </div>
@@ -117,8 +139,16 @@ export default function Services() {
                   />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold mb-2">Process Optimization</h3>
-              <p className="text-muted-foreground">
+              <h3
+                className="text-lg sm:text-xl font-bold mb-2"
+                style={{ fontSize: "clamp(1.25rem, 2.5vw, 1.5rem)" }}
+              >
+                Process Optimization
+              </h3>
+              <p
+                className="text-muted-foreground text-sm sm:text-base"
+                style={{ fontSize: "clamp(0.875rem, 2vw, 1rem)" }}
+              >
                 We streamline operations to enhance efficiency, reduce costs, and improve overall performance.
               </p>
             </div>
@@ -134,8 +164,16 @@ export default function Services() {
                   />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold mb-2">Leadership Development</h3>
-              <p className="text-muted-foreground">
+              <h3
+                className="text-lg sm:text-xl font-bold mb-2"
+                style={{ fontSize: "clamp(1.25rem, 2.5vw, 1.5rem)" }}
+              >
+                Leadership Development
+              </h3>
+              <p
+                className="text-muted-foreground text-sm sm:text-base"
+                style={{ fontSize: "clamp(0.875rem, 2vw, 1rem)" }}
+              >
                 We empower your leaders with the skills and knowledge needed to drive organizational success.
               </p>
             </div>
@@ -150,8 +188,16 @@ export default function Services() {
       {/* CTA Section */}
       <section className="py-20 bg-primary/90 text-primary-foreground relative z-10">
         <div className="container px-4 md:px-6 mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tighter mb-4">Ready to Elevate Your Business?</h2>
-          <p className="text-xl max-w-[600px] mx-auto mb-8 text-primary-foreground/80">
+          <h2
+            className="font-bold tracking-tighter text-2xl sm:text-3xl md:text-4xl mb-4"
+            style={{ fontSize: "clamp(1.75rem, 4vw, 2.5rem)" }}
+          >
+            Ready to Elevate Your Business?
+          </h2>
+          <p
+            className="text-base sm:text-lg md:text-xl max-w-[600px] mx-auto mb-8 text-primary-foreground/80"
+            style={{ fontSize: "clamp(1rem, 2.5vw, 1.125rem)" }}
+          >
             Contact us today to explore how our services can benefit your organization.
           </p>
           <Button asChild size="lg" variant="secondary" className="rounded-full">
