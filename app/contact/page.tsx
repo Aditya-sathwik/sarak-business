@@ -126,7 +126,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-bold mb-1">Office</h3>
                     <p className="text-muted-foreground">
-                      Innova Cybergreen, Tower C, 5th floor, DLF Cybergreen, Cyber City, Sector 24, Gurgoon, Haryana 122001
+                      Innov8 Cybergreen, Tower C, 5th floor, DLF Cybergreen, Cyber City, Sector 24, Gurgoon, Haryana 122001
                     </p>
                   </div>
                 </div>

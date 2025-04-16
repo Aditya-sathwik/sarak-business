@@ -47,7 +47,7 @@ export default function Footer() {
             <p className="text-sm text-muted-foreground mb-4">
               We specialize in providing comprehensive Technical support to Business and Startup
             </p>
-            <div className="flex space-x-4">
+            {/* <div className="flex space-x-4">
               <Link href="#" className="text-muted-foreground hover:text-primary">
                 <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path
@@ -89,7 +89,7 @@ export default function Footer() {
                   />
                 </svg>
               </Link>
-            </div>
+            </div> */}
           </div>
 
           <div>

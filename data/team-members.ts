@@ -26,9 +26,9 @@ export type TeamMember = {
       image: sameer.src,
       bio: "AI & Machine Learning Engineer & Full-Stack Developer",
       socialLinks: {
-        twitter: "https://twitter.com/loremipsum",
-        linkedin: "https://linkedin.com/in/loremipsum",
-        github: "https://github.com/loremipsum",
+        twitter: "https://x.com/sameeerofficial",
+        linkedin: "https://www.linkedin.com/in/sameer104/",
+        github: "https://github.com/Sameer103",
       },
     },
     {
@@ -38,9 +38,9 @@ export type TeamMember = {
       image: kaushik.src,
       bio: " Full-Stack Developer specializing in React, Node.js, and Express.js",
       socialLinks: {
-        twitter: "https://twitter.com/dolorsit",
-        linkedin: "https://linkedin.com/in/dolorsit",
-        github: "https://github.com/dolorsit",
+        twitter: " https://x.com/sai_ram_kaushik",
+        linkedin: "https://www.linkedin.com/in/sairamkaushik/",
+        github: "https://github.com/sai-ram-kaushik",
       },
     },
     {
@@ -51,7 +51,7 @@ export type TeamMember = {
       bio: "Integration Specialist excelling in MFT API and Software AG Webmethods",
       socialLinks: {
         twitter: "https://twitter.com/ametconsectetur",
-        linkedin: "https://linkedin.com/in/ametconsectetur",
+        linkedin: "https://www.linkedin.com/in/akanksha-tomer-a57041245",
         github: "https://github.com/ametconsectetur",
       },
     },
@@ -62,9 +62,9 @@ export type TeamMember = {
       image: aditya.src,
       bio: "Full-Stack Developer with expertise in React, Node.js, and Express.js",
       socialLinks: {
-        twitter: "https://twitter.com/adipiscingelit",
-        linkedin: "https://linkedin.com/in/adipiscingelit",
-        github: "https://github.com/adipiscingelit",
+        twitter: "https://twitter.com/AdityaSathwik",
+        linkedin: "https://www.linkedin.com/in/aditya-sathwik-dasari-553616219/",
+        github: "https://github.com/Aditya-sathwik",
       },
     },
     // {
