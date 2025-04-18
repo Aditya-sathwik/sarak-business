@@ -4,6 +4,7 @@ import sameer from "../public/team/sammer.jpg";
 import aditya from "../public/team/adiii.jpg";
 import akanksha from "../public/team/at.jpg";
 import kaushik from "../public/team/k2.jpg";
+import ashish from "../public/team/ashish.jpeg";
 export type TeamMember = {
     id: string;
     name: string;
@@ -65,6 +66,18 @@ export type TeamMember = {
         twitter: "https://twitter.com/AdityaSathwik",
         linkedin: "https://www.linkedin.com/in/aditya-sathwik-dasari-553616219/",
         github: "https://github.com/Aditya-sathwik",
+      },
+    },
+    {
+      id: "member-5",
+      name: "Ashish Jha",
+      role: "Executive AI",
+      image: ashish.src,
+      bio: "Aspiring Data Analyst | Passionate about Data-Driven Decision Making",
+      socialLinks: {
+        // twitter: "https://twitter.com/ashishjha",
+        linkedin: "https://www.linkedin.com/in/ashish-jha-33b57a206/",
+        github: "https://github.com/ashishkjha018",
       },
     },
     // {
